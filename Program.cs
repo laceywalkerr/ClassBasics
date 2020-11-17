@@ -2,37 +2,67 @@
 
 namespace ClassBasics
 {
-    // class Program
-    // {
-    //     static void Main(string[] args)
-    //     {
-    //         Console.WriteLine("Hello World!");
-    //     }
-    // }
-
-    public class Writer
+    public class Customer
     {
-        public Writer(string prefix)
+        private string FirstName { get; set; }
+
+        private string LastName { get; set; }
+
+        public bool IsLocal { get; set; }
+
+        public string FullName
         {
-            Prefix = prefix;
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
         }
 
-        public string Prefix { get; set; }
-
-        public void Write(string message)
+        public void ChangeFirstName(string FirstName)
         {
-            Console.WriteLine(Prefix + message);
-
-            // The output variable's type is `string` -- a built in type
-            string output = "Nashville Software School";
-
-            // The author variable's type is Writer -- a custom type you defined
-            Writer author = new Writer("I do declare: ");
-            author.Write(output);
-
-            author.Prefix = "That's right, I said: ";
-            author.Write(output);
+            if (FirstName.Length > 1)
+            {
+                FirstName = firstName;
+            }
         }
+    }
 
+    public class DeliveryService
+    {
+        // Properties
+
+        public string Name { get; set; }
+
+        public string TransitType { get; set; }
+
+        // Methods
+
+        public void Deliver(Product product, Customer customer)
+    }
+
+    public void Ship(Customer customer, DeliveryService service)
+    {
+        if (!customer.IsLocal)
+        {
+            service.Deliver(this, customer);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer = new Customer();
+            customer.ChangeFirstName("a");
+            Console.Write(customer.FullName);
+
+            Product tinkerToys = new Product()
+            {
+                TypeInitializationException = "Tinker Yoys",
+                    Description = "You can build anything oyu want",
+                    Predicate = 32.99,
+                    Quantity = 25
+            }
+        }
     }
 }
