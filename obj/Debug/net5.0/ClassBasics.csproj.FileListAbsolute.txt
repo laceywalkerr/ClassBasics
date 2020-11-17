@@ -1,0 +1,16 @@
+C:\Users\Lacey\workspace\ClassBasics\bin\Debug\net5.0\ClassBasics.exe
+C:\Users\Lacey\workspace\ClassBasics\bin\Debug\net5.0\ClassBasics.deps.json
+C:\Users\Lacey\workspace\ClassBasics\bin\Debug\net5.0\ClassBasics.runtimeconfig.json
+C:\Users\Lacey\workspace\ClassBasics\bin\Debug\net5.0\ClassBasics.runtimeconfig.dev.json
+C:\Users\Lacey\workspace\ClassBasics\bin\Debug\net5.0\ClassBasics.dll
+C:\Users\Lacey\workspace\ClassBasics\bin\Debug\net5.0\ref\ClassBasics.dll
+C:\Users\Lacey\workspace\ClassBasics\bin\Debug\net5.0\ClassBasics.pdb
+C:\Users\Lacey\workspace\ClassBasics\obj\Debug\net5.0\ClassBasics.csprojAssemblyReference.cache
+C:\Users\Lacey\workspace\ClassBasics\obj\Debug\net5.0\ClassBasics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lacey\workspace\ClassBasics\obj\Debug\net5.0\ClassBasics.AssemblyInfoInputs.cache
+C:\Users\Lacey\workspace\ClassBasics\obj\Debug\net5.0\ClassBasics.AssemblyInfo.cs
+C:\Users\Lacey\workspace\ClassBasics\obj\Debug\net5.0\ClassBasics.csproj.CoreCompileInputs.cache
+C:\Users\Lacey\workspace\ClassBasics\obj\Debug\net5.0\ClassBasics.dll
+C:\Users\Lacey\workspace\ClassBasics\obj\Debug\net5.0\ref\ClassBasics.dll
+C:\Users\Lacey\workspace\ClassBasics\obj\Debug\net5.0\ClassBasics.pdb
+C:\Users\Lacey\workspace\ClassBasics\obj\Debug\net5.0\ClassBasics.genruntimeconfig.cache
