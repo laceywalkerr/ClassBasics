@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace ClassBasics
+namespace Classes
 {
     public class Customer
     {
-        private string FirstName { get; set; }
+        // Public Properties
+        public string FirstName { get; set; }
 
-        private string LastName { get; set; }
+        public string LastName { get; set; }
 
         public bool IsLocal { get; set; }
 
@@ -17,34 +19,48 @@ namespace ClassBasics
                 return $"{FirstName} {LastName}";
             }
         }
-
-        public void ChangeFirstName(string FirstName)
-        {
-            if (FirstName.Length > 1)
-            {
-                FirstName = firstName;
-            }
-        }
     }
 
     public class DeliveryService
     {
-        // Properties
-
+        /*
+          Properties
+        */
         public string Name { get; set; }
 
         public string TransitType { get; set; }
 
-        // Methods
-
+        /*
+          Methods
+        */
         public void Deliver(Product product, Customer customer)
+        {
+            Console.WriteLine($"Product delivered by {TransitType} to {customer.FullName}");
+        }
     }
 
-    public void Ship(Customer customer, DeliveryService service)
+    public class Product
     {
-        if (!customer.IsLocal)
+        /*
+          Properties
+        */
+        public string Title { get; set; }
+
+        public string Description { get; set; }
+
+        public double Price { get; set; }
+
+        public int Quantity { get; set; }
+
+        /*
+          Methods
+        */
+        public void Ship(Customer customer, DeliveryService service)
         {
-            service.Deliver(this, customer);
+            if (!customer.IsLocal)
+            {
+                service.Deliver(this, customer);
+            }
         }
     }
 
@@ -52,17 +68,31 @@ namespace ClassBasics
     {
         static void Main(string[] args)
         {
-            Customer customer = new Customer();
-            customer.ChangeFirstName("a");
-            Console.Write(customer.FullName);
-
             Product tinkerToys = new Product()
             {
-                TypeInitializationException = "Tinker Yoys",
-                    Description = "You can build anything oyu want",
-                    Predicate = 32.99,
-                    Quantity = 25
-            }
+                Title = "Tinker Toys",
+                Description = "You can build anything you want",
+                Price = 32.49,
+                Quantity = 25
+            };
+
+            Customer marcus = new Customer()
+            {
+                FirstName = "Marcus",
+                LastName = "Fulbright",
+                IsLocal = false
+            };
+
+            DeliveryService UPS = new DeliveryService()
+            {
+                Name = "UPS",
+                TransitType = "train"
+            };
+
+            Console.WriteLine(tinkerToys.Price);
+
+            // Ship the tinker toys to Marcus using UPS
+            tinkerToys.Ship(marcus, UPS);
         }
     }
 }
